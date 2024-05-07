@@ -3,11 +3,18 @@ import logo from "/src/assets/icons/logo.svg"
 
 const Navbar = () => {
 
-   
+   const lis = 
+   <>
+   <li to="/"><Link>Home</Link></li>
+   <li to="/about"><Link>About</Link></li>
+   <li to="/service"><Link>Service</Link></li>
+   <li to="/blog"><Link>Blog</Link></li>
+   <li to="/contact"><Link>Contact</Link></li>
+   </>
 
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 my-12">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +37,7 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              
+              {lis}
             </ul>
           </div>
          <div>
@@ -38,12 +45,12 @@ const Navbar = () => {
          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-           
+          <ul className="menu menu-horizontal px-1 gap-10">
+           {lis}
           </ul>
         </div>
         <div className="navbar-end">
-        <button className="btn btn-outline  text-pcolor">Appointment</button>
+        <button className="btn btn-outLinkne  text-pcolor">Appointment</button>
         </div>
       </div>
     </div>
